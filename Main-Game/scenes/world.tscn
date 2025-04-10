@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c3cjs0rf22fi" path="res://Main-Game/scenes/player.tscn" id="1_6n0my"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_o5le1"]
-distance = -507.0
+distance = -691.0
 
 [node name="World" type="Node2D"]
 

@@ -3,6 +3,7 @@ extends CharacterBody2D
 var jump_vel = 600
 var speed = 300
 var gravity = 980
+var jump_pressed = false
 
 @onready var sprite = $AnimatedSprite2D
 
@@ -11,6 +12,9 @@ func _physics_process(delta):
 		velocity.y += gravity * 2 * delta
 		
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
+		jump_pressed = true
+		
+	if jump_pressed:
 		velocity.y = -jump_vel
 	
 	var direction = Input.get_axis("left", "right")
